@@ -552,14 +552,14 @@ ul.tech-stack {
   flex-wrap: wrap;
   gap: 0px 30px;
   padding: 0px;
-  margin: 20px 0px 0px;
   overflow: hidden;
   list-style: none;
 }
 
 ul.tech-stack li {
   position: relative;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding-left: 20px;
   font-size: var(--fs-5);
 }
@@ -576,6 +576,33 @@ ul.tech-stack li::before {
 }
 
 .about-text p { margin-bottom: 15px; }
+
+.tech-item {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px;
+}
+
+.tech-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.tech-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
 
 
 
@@ -977,10 +1004,20 @@ ul.experience-points li::before {
   margin-bottom: 7px;
 }
 
-.timeline-list span {
-  color: var(--vegas-gold);
+.timeline-list .timeline-year {
+  color: var(--blue-purple-crayola);
   font-weight: var(--fw-400);
   line-height: 1.6;
+}
+
+.timeline-coursework {
+  display: flex;
+  margin-left: 5px;
+}
+
+.education-description {
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -2054,6 +2091,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * RESUME
 	 */
 
-  .timeline-text { max-width: 700px; }
+  /* .timeline-text { max-width: 700px; } */
 
 }
