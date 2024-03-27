@@ -708,6 +708,10 @@ ul.tech-stack li::before {
   overflow: hidden;
 }
 
+/* .bold-bullet-point {
+  font-weight: var(--fw-700);
+} */
+
 ul.experience-points {
   display: flex;
   flex-wrap: wrap;
@@ -723,7 +727,7 @@ ul.experience-points li {
   margin-bottom: 20px;
   padding-left: 20px;
   font-size: var(--fs-5);
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-400);
 }
 
 ul.experience-points li::before {
@@ -747,7 +751,7 @@ ul.experience-points li::before {
   margin-bottom: 5px;
   font-size: var(--fs-5);
   font-weight: var(--fw-500);
-  color: hsl(215.4 16.3% 56.9%);
+  color: hsl(215, 61%, 80%);
 }
 
 .experience-position {
