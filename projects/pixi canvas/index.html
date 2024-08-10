@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+     <!-- fontawesome icons -->
+     <script src="https://kit.fontawesome.com/22375b6341.js" crossorigin="anonymous"></script>
+     <!-- google fonts preconnect -->
+     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- custom css -->
+     <link rel="stylesheet" href="./style.css">
+    <title>PixiCanvas.</title>
+</head>
+<body>
+    <div id="loadingscreen">
+        <div id="spinner"></div>
+    </div>
+    <div id="main">
+    <div class="menu">
+        <div class="menu-inner">
+            <button id="menu-create"class="active"> Create </button>
+            <button id="menu-frames"> Frames </button>
+            <button id="menu-settings"> Settings & Export </button>
+            <!-- <button id="menu-export"> Export </button>
+            <button id="menu-help"> Help </button> -->
+        </div>
+        <div class="header">
+           Pixi Canvas
+        </div>
+    </div>
+
+    <div class="flex-container">
+    <div id="side-create" class="show">
+        <div id="brushes">
+            <button id="pencil" name="pencil" class="active"><i class="fa-solid fa-paintbrush"></i></button>
+            <button id="fill" name="fill"><i class="fa-solid fa-fill-drip"></i></button>
+            <button id="shape" name="shape"><i class="fa-solid fa-draw-polygon"></i></button>
+            <button id="erase" name="erase"><i class="fa-solid fa-eraser"></i></button>
+            <button id="ysim" name="y-axis symmetry" >
+                <img src="media/sym.webp" alt="y-axis symmetry image">
+            </button>
+            <button id="xsim" name="pencil">
+                <img src="media/sym.webp" alt="x-axis symmetry image">
+            </button>
+            <button id="blank" name="blank"><i class="fa-regular fa-trash-can"></i></button>
+            <button id="undo" name="undo" disabled><i class="fa-solid fa-rotate-left"></i></button>
+            <button id="redo" name="redo" disabled><i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+        <div id="colors">
+            <input type="color" name="colorpicker" id="colorpicker">
+            <div id="picker-display"  onclick="document.getElementById('colorpicker').click()"></div>
+            <div class="tg-c"></div>
+            <div class="tg-b"></div>
+            <div class="tg-y"></div>
+            <div class="tg-r"></div>
+            <div class="tg-l"></div>
+            <div class="tg-m"></div>
+            <div class="tg-mr"></div>
+            <div class="tg-o"></div>
+            <div class="tg-g"></div>
+            <div class="tg-p"></div>
+            <div class="tg-t"></div>
+            <div class="tg-n"></div>
+            <div class="tg-bl"></div>
+            <div class="tg-gy"></div>
+            <div class="tg-w"></div>
+            <div class="tg-bg"></div>
+            <div class="tg-tg"></div>
+            <div class="tg-dg"></div>
+        </div>
+    </div>
+    <div id="side-frames">
+        <div id="frameContainer">
+            <p>When you add frames they will appear here</p>
+        </div>
+        <button id="edit"><i class="fa-regular fa-trash-can"></i> Delete Frames</button>
+    </div>
+    <div id="side-settings">
+        <div id="gridSize">
+            <label for="points">Grid Size:&nbsp;</label> 
+            <select id="gridInput">
+                <!-- <optgroup class="gridSizeOptions"> -->
+                    <option value="10">10x10</option>
+                    <option value="20">20x20</option>
+                    <option value="30" selected>30x30</option>
+                    <option value="40">40x40</option>
+                    <option value="50">50x50</option>
+                <!-- </optgroup> -->
+            </select>
+
+        </div>
+        <div id="toggleBackground">
+            <p>Show Background</p>
+            <p id="backgroundCheck"><i class="fa-solid fa-check"></i></p>
+        </div>
+        <div id="toggleGrid" class="disabled">
+            <p>Add Grid</p>
+            <p id="gridCheck" class="hidden"><i class="fa-solid fa-check"></i></p>
+        </div>
+        <!-- <div id="save">
+            <p>Save as .pixel</p>
+            <p><i class="fa-regular fa-floppy-disk"></i></p>
+        </div>
+        <div id="open">
+            <p>Open .pixel</p>
+            <p><i class="fa-regular fa-floppy-disk"></i></p>
+        </div> -->
+        <div id="pngdown">
+            <p> Download as .png </p>
+            <p><i class="fa-solid fa-download"></i></p>
+        </div>
+        <!-- <div id="gifdown">
+            <p> Download as .gif</p>
+            <p><i class="fa-solid fa-download"></i></p>
+        </div> -->
+        <div id="share">
+            <p id="sharetext">Share Website</p>
+            <p><i class="fa-solid fa-share-nodes"></i></p>
+        </div>
+    </div>
+    <div id="grid-container">
+        <div id="grid" class="visible-background"></div>
+    </div>
+    <div id="right-side">
+        <div>
+            <p id="ptext" class="w-100 text-center">Preview</p>
+            <div id="sample">
+                <div id="sampleImg">
+                    <p>Add frames to preview your animation here</p>
+                </div>
+            </div>
+        </div>
+        <div class="tools">
+            <button id="add"><i class="fa-solid fa-plus"></i> Add Frame</button>
+            <button id="download"><i class="fa-solid fa-download"></i> Download Image</button>  
+        </div>
+    </div>
+    </div>
+    <script src="scripts/jquery-3.6.2.min.js"></script>
+    <script src="scripts/dom-to-image.js"></script>
+    <script src="scripts/FileSaver.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
