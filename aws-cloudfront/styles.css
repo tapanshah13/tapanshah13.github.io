@@ -25,6 +25,11 @@ body {
     display: flex;
 }
 
+.profile-icon {
+  color: #ff9900;
+  text-decoration: none;
+}
+
 .vertical-line {
     width: 1px;
     /* Thin vertical line */
